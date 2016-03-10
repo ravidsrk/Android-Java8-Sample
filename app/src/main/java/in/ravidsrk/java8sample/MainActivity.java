@@ -4,6 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,5 +22,16 @@ public class MainActivity extends AppCompatActivity {
         // lamba expressions
         findViewById(R.id.btn_clickme).setOnClickListener(v -> Toast.makeText(MainActivity.this,"Hello Lambda!",Toast.LENGTH_LONG).show());
 
+        // switch string
+        String action = "check";
+
+        switch (action) {
+            case "check":
+                Toast.makeText(MainActivity.this,"Check",Toast.LENGTH_LONG).show();
+                break;
+            case "test":
+                Toast.makeText(MainActivity.this,"Test",Toast.LENGTH_LONG).show();
+                break;
+        }
     }
 }
