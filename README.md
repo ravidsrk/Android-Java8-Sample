@@ -1,4 +1,4 @@
-# AndroidJava8FeaturesSample
+# Android Java8 Features Sample
 Playground for all the Java 8 features supported in Jack compliler.  
 
 ```java
