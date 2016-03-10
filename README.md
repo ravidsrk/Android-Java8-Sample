@@ -5,7 +5,7 @@ Playground for all the Java 8 features supported in Jack compliler.
 //
 // lambda expressions
 //
-findViewById(R.id.btn_clickme).setOnClickListener(v -> Toast.makeText(MainActivity.this, "Hello Lambda!", Toast.LENGTH_LONG).show());
+btn.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Hello Lambda!", Toast.LENGTH_LONG).show());
 
 List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
 
