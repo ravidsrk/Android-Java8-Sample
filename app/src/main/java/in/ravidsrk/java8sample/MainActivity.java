@@ -33,5 +33,20 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Test",Toast.LENGTH_LONG).show();
                 break;
         }
+
+        // try(with-resources) {}
+        final List<String> lines = new ArrayList<>();
+        try (final InputStream is = this.getAssets().open("words.txt");
+             final InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+             final BufferedReader reader = new BufferedReader(isr)) {
+            String line;
+            while ( (line = reader.readLine()) != null ) {
+                lines.add(line);
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
